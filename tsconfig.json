@@ -1,9 +1,15 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist",           // Output directory for compiled JavaScript
-      "module": "commonjs",         // Module system
-      "target": "es6",              // JavaScript version
-      "strict": true                // Enable all strict type-checking options
-    },
-    "include": ["src/**/*"]         // Include all .ts files in the src folder
-  }
+  "compilerOptions": {
+    "outDir": "./dist",           // Directory where compiled JavaScript files will go
+    "module": "commonjs",         // Module system used
+    "target": "es6",              // JavaScript version
+    "strict": true                // Enable strict checking
+  },
+  "include": [
+    "src/**/*.ts"                 // Ensure all TypeScript files in src folder are included
+  ],
+  "exclude": [
+    "node_modules",               // Don't include the node_modules folder
+    "dist"                        // Avoid compiling files from the dist directory
+  ]
+}
