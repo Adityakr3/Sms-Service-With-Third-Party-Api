@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .translate-x-full {
+            transform: translateX(100%);
+        }
+        .translate-x-0 {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">SMS Panel</h1>
+        
+        <div class="bg-black rounded-lg shadow p-6 mb-8">
+            <form id="smsForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-white">Phone Numbers</label>
+                    <textarea 
+                        id="phoneNumbers" 
+                        class="mt-1 bg-black p-2 border-2 border-gray-700 block w-full rounded-md  shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        rows="3"
+                        placeholder="Enter phone numbers (one per line)"
+                        required
+                    ></textarea>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-white">Message</label>
+                    <textarea 
+                        id="message" 
+                        class="mt-1 bg-black p-2 border-2 border-gray-700 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        rows="4"
+                        placeholder="Enter your message"
+                        required
+                    ></textarea>
+                </div>
+                
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                    Send SMS
+                </button>
+            </form>
+        </div>
+
+        <div class="bg-black text-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">SMS History</h2>
+            <div id="history" class="space-y-4"></div>
+        </div>
+    </div>
+
+    <script src="js/notifications.js"></script>
+    <script src="js/formHandler.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
